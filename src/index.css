@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Precision sci-fi tabletop surface grid */
+.arena-grid-bg {
+  background-color: #090d14;
+  background-image:
+    radial-gradient(circle at 50% 38%, rgba(34, 211, 238, 0.08) 0%, rgba(9, 13, 20, 0) 56%),
+    linear-gradient(to right, rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 44px 44px, 44px 44px;
+}
+
+.theme-holographic {
+  --board-frame: #0c192c;
+  --board-surface: #071120;
+  --board-accent: #22d3ee;
+  --board-gold: #38bdf8;
+}
+
+.theme-obsidian {
+  --board-frame: #151b26;
+  --board-surface: #0e131b;
+  --board-accent: #22d3ee;
+  --board-gold: #f59e0b;
+}
+
+.theme-brass {
+  --board-frame: #1c1813;
+  --board-surface: #12100d;
+  --board-accent: #f59e0b;
+  --board-gold: #fbbf24;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

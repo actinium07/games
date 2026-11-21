@@ -1,0 +1,6 @@
+{
+  "name": "Orbital Quartet",
+  "description": "Offline futuristic 4-in-1 tabletop game suite featuring Ludo, Chess, Carrom, and Snake & Ladder in Single Player vs AI mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
