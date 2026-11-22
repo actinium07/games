@@ -1,0 +1,8 @@
+{
+	"appId": "com.orbitalquartet.app",
+	"appName": "Orbital Quartet",
+	"webDir": "dist",
+	"android": {
+		"allowMixedContent": false
+	}
+}

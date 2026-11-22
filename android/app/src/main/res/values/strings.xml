@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Orbital Quartet</string>
+    <string name="title_activity_main">Orbital Quartet</string>
+    <string name="package_name">com.orbitalquartet.app</string>
+    <string name="custom_url_scheme">com.orbitalquartet.app</string>
+</resources>

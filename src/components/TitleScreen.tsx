@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Volume2, VolumeX, Play, Cpu, Sparkles, Layers } from 'lucide-react';
 import type { AIDifficulty, BoardTheme, FuturisticOptions, GameId } from '../types/game';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface TitleScreenProps {
   selectedGame: GameId;
@@ -256,15 +257,18 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           </span>
         </div>
 
-        <button
-          type="button"
-          onClick={onToggleMute}
-          aria-label={muted ? 'Unmute audio' : 'Mute audio'}
-          className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-900/90 border border-slate-700/80 text-slate-200 hover:border-cyan-400/60 hover:text-white transition-colors text-xs font-medium cursor-pointer"
-        >
-          {muted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-cyan-400" />}
-          <span>{muted ? 'Audio Muted' : 'Audio On'}</span>
-        </button>
+        <div className="flex items-center gap-2.5">
+          <PWAInstallButton />
+          <button
+            type="button"
+            onClick={onToggleMute}
+            aria-label={muted ? 'Unmute audio' : 'Mute audio'}
+            className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-900/90 border border-slate-700/80 text-slate-200 hover:border-cyan-400/60 hover:text-white transition-colors text-xs font-medium cursor-pointer"
+          >
+            {muted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-cyan-400" />}
+            <span>{muted ? 'Audio Muted' : 'Audio On'}</span>
+          </button>
+        </div>
       </div>
 
       {/* Main Split Focal Stage */}
